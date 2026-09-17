@@ -1,4 +1,4 @@
-```javascript
+
 const login = require("./login");
 
 test("Đăng nhập đúng với admin / 123 thì trả về true", () => {
@@ -12,4 +12,4 @@ test("Đăng nhập sai mật khẩu thì trả về false", () => {
 test("Đăng nhập sai username thì trả về false", () => {
     expect(login("user", "123")).toBe(false);
 });
-```
+
