@@ -1,12 +1,11 @@
 {
-    "name": "login-test",
-    "version": "1.0.0",
-    "description": "Simple login unit test",
-    "main": "login.js",
-    "scripts": {
-        "test": "jest"
-    },
-    "devDependencies": {
-        "jest": "^30.0.0"
-    }
+  "name": "login-jest-demo",
+  "version": "1.0.0",
+  "description": "Ví dụ form đăng nhập và Unit Test bằng Jest",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
 }
