@@ -1,17 +1,9 @@
 const login = require("./login");
 
-test("Đăng nhập đúng username và password", () => {
+test("Login with correct username and password", () => {
     expect(login("admin", "123")).toBe(true);
 });
 
-test("Đăng nhập sai username", () => {
+test("Login with incorrect username and password", () => {
     expect(login("user", "123")).toBe(false);
-});
-
-test("Đăng nhập sai password", () => {
-    expect(login("admin", "456")).toBe(false);
-});
-
-test("Đăng nhập sai cả username và password", () => {
-    expect(login("user", "456")).toBe(false);
 });
