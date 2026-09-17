@@ -1,8 +1,12 @@
-npm init -y
-npm install --save-dev jest
-
-"scripts": {
-    "test": "jest"
+{
+    "name": "login-test",
+    "version": "1.0.0",
+    "description": "Simple login unit test",
+    "main": "login.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "jest": "^30.0.0"
+    }
 }
-
-npm test
