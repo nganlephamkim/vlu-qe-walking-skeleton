@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
+    <title>Login</title>
 </head>
 <body>
 
     <h2>Form đăng nhập</h2>
 
-    <form id="loginForm">
+    <form>
         <input type="text" id="username" placeholder="Username">
         <br><br>
 
         <input type="password" id="password" placeholder="Password">
         <br><br>
 
-        <button type="submit">Đăng nhập</button>
+        <button type="button" onclick="checkLogin()">Đăng nhập</button>
     </form>
 
-    <p id="message"></p>
+    <p id="result"></p>
 
     <script src="login.js"></script>
 </body>
