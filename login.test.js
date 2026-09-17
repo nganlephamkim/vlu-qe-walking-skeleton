@@ -1,15 +1,25 @@
+name: Jest Tests
 
-const login = require("./login");
+on:
+  push:
+    branches:
+      - main
 
-test("Đăng nhập đúng với admin / 123 thì trả về true", () => {
-    expect(login("admin", "123")).toBe(true);
-});
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-test("Đăng nhập sai mật khẩu thì trả về false", () => {
-    expect(login("admin", "456")).toBe(false);
-});
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-test("Đăng nhập sai username thì trả về false", () => {
-    expect(login("user", "123")).toBe(false);
-});
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Jest tests
+        run: npm test
