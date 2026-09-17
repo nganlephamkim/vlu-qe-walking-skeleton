@@ -1,4 +1,4 @@
-```javascript
+
 function login(username, password) {
     return username === "admin" && password === "123";
 }
@@ -16,4 +16,4 @@ function checkLogin() {
 if (typeof module !== "undefined" && module.exports) {
     module.exports = login;
 }
-```
+
