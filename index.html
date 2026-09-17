@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
+name: Jest Tests
 
-    <h2>Form đăng nhập</h2>
+on:
+  push:
+    branches:
+      - main
 
-    <form>
-        <input type="text" id="username" placeholder="Username">
-        <br><br>
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-        <input type="password" id="password" placeholder="Password">
-        <br><br>
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-        <button type="button" onclick="checkLogin()">Đăng nhập</button>
-    </form>
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-    <p id="result"></p>
+      - name: Install dependencies
+        run: npm install
 
-    <script src="login.js"></script>
-</body>
-</html>
-
+      - name: Run Jest tests
+        run: npm test
