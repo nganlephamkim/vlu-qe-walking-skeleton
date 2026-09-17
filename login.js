@@ -1,25 +1,16 @@
-name: Jest Tests
+function login(username, password) {
+    return username === "admin" && password === "123";
+}
 
-on:
-  push:
-    branches:
-      - main
+function checkLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
+    const result = login(username, password);
 
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
+    document.getElementById("result").innerText = result;
+}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Jest tests
-        run: npm test
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = login;
+}
