@@ -1,28 +1,20 @@
-function login(username, password) {
-    if (username === "admin" && password === "123") {
+function login(user, pass) {
+    if (user === "admin" && pass === "123") {
         return true;
     }
 
     return false;
 }
 
-// Xử lý form đăng nhập
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+function checkLogin() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let result = login(user, pass);
 
-    let result = login(username, password);
+    document.getElementById("result").innerText = result;
+}
 
-    if (result) {
-        document.getElementById("message").innerText = "Đăng nhập thành công!";
-    } else {
-        document.getElementById("message").innerText = "Sai username hoặc password!";
-    }
-});
-
-// Export hàm để Jest có thể kiểm thử
 if (typeof module !== "undefined") {
     module.exports = login;
 }
