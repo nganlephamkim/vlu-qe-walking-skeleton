@@ -1,11 +1,13 @@
+```json
 {
-  "name": "login-jest-demo",
-  "version": "1.0.0",
-  "description": "Ví dụ form đăng nhập và Unit Test bằng Jest",
-  "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "jest": "^30.0.0"
-  }
+    "name": "login-jest-demo",
+    "version": "1.0.0",
+    "description": "Vi du form dang nhap va Unit Test bang Jest",
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "jest": "^30.0.0"
+    }
 }
+```
