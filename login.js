@@ -1,23 +1,16 @@
-function login(user, pass) {
-    if (user === "admin" && pass === "123") {
-        return true;
-    }
-
-    return false;
+function login(username, password) {
+  return username === "admin" && password === "123";
 }
 
-function checkLogin() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-
-    let result = login(user, pass);
-
-    document.getElementById("result").innerText = result;
+// Dùng cho Jest trong môi trường Node.js
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = login;
+}
+function login(username, password) {
+  return username === "admin" && password === "123";
 }
 
-if (typeof module !== "undefined") {
-    module.exports = login;
-}
-if (user === "admin" && pass === "123") {
-    return true;
+// Dùng cho Jest trong môi trường Node.js
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = login;
 }
